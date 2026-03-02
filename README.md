@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ikaze Burundi — Tourisme au Cœur de l'Afrique
 
-## Getting Started
+Site vitrine touristique mettant en valeur le Burundi, ses paysages, sa culture et son patrimoine.
 
-First, run the development server:
+> **Ikaze** signifie « Bienvenue » en Kirundi.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Apercu
+
+Un site one-page moderne avec des animations fluides, un scroll parallaxe et une typographie soignée. Le site présente les destinations incontournables du Burundi : le Lac Tanganyika, le Mont Heha, les Chutes de Karera, la Source du Nil et la Plage de Saga, ainsi que la richesse culturelle du pays (Tambourinaires, Danse Intore, Artisanat).
+
+## Tech Stack
+
+| Categorie     | Technologie                  |
+| ------------- | ---------------------------- |
+| Framework     | Next.js 16 (App Router)      |
+| UI            | React 19                     |
+| Langage       | TypeScript                   |
+| Styling       | Tailwind CSS v4              |
+| Animations    | GSAP + ScrollTrigger         |
+| Scroll fluide | Lenis                        |
+| Police        | Cormorant Garamond (serif)   |
+
+## Structure
+
+```
+src/
+├── app/
+│   ├── layout.tsx           # Layout racine, metadata, fonts
+│   ├── page.tsx             # Page d'accueil
+│   └── globals.css          # Styles globaux + Tailwind
+│
+└── components/
+    ├── Navbar.tsx            # Navigation fixe
+    ├── Hero.tsx              # Section hero avec parallaxe
+    ├── ProjectsSection.tsx   # Destinations du Burundi
+    ├── PhilosophySection.tsx # Culture & patrimoine
+    ├── ContactSection.tsx    # Contact / office du tourisme
+    ├── Footer.tsx            # Pied de page
+    ├── CustomCursor.tsx      # Curseur personnalisé
+    ├── SmoothScroll.tsx      # Wrapper Lenis
+    ├── ParallaxImage.tsx     # Images avec effet parallaxe
+    └── ScrollRevealText.tsx  # Texte révélé au scroll
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Cloner le repo
+git clone https://github.com/bazagod/ikaze-burundi.git
+cd ikaze-burundi
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Installer les dépendances
+npm install
 
-## Learn More
+# Lancer en développement
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+Le site sera accessible sur [http://localhost:3000](http://localhost:3000).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Scripts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Commande        | Description                        |
+| --------------- | ---------------------------------- |
+| `npm run dev`   | Serveur de développement (Turbopack) |
+| `npm run build` | Build de production                |
+| `npm run start` | Serveur de production              |
+| `npm run lint`  | Linter ESLint                      |
 
-## Deploy on Vercel
+## Sections du site
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Hero** — Introduction visuelle plein écran avec animation de parallaxe
+- **Destinations** — Lac Tanganyika, Mont Heha, Chutes de Karera, Source du Nil, Plage de Saga
+- **Culture & Patrimoine** — Tambourinaires, Danse Intore, Artisanat burundais
+- **Contact** — Office du tourisme et réservations
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Auteur
+
+Conçu et développé par **[Bazagod](https://github.com/bazagod)**.
+
+## Licence
+
+Tous droits réservés. Toute reproduction ou copie non autorisée est strictement interdite.

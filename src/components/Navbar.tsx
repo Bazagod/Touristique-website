@@ -1,45 +1,24 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
+import { useEffect, useState } from "react";
 
 export default function Navbar() {
-  const navRef = useRef<HTMLElement>(null);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const nav = navRef.current;
-    if (!nav) return;
-
-    gsap.from(nav, {
-      y: -30,
-      opacity: 0,
-      duration: 1.2,
-      delay: 1,
-      ease: "power3.out",
-    });
-
-    ScrollTrigger.create({
-      start: "100 top",
-      onUpdate: (self) => {
-        setScrolled(self.progress > 0);
-      },
-    });
-
-    return () => {
-      ScrollTrigger.getAll().forEach((t) => t.kill());
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 100);
     };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <nav
-      ref={navRef}
       className={`fixed top-0 left-0 z-50 flex w-full items-center justify-between px-8 py-6 transition-all duration-700 ${
         scrolled
-          ? "bg-background/80 backdrop-blur-md"
+          ? "bg-background/90 shadow-sm backdrop-blur-md"
           : "bg-transparent"
       }`}
     >

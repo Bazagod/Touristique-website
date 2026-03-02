@@ -13,6 +13,12 @@ export const metadata: Metadata = {
   title: "Ikaze Burundi — Tourisme au Cœur de l'Afrique",
   description:
     "Découvrez le Burundi : Lac Tanganyika, Source du Nil, Chutes de Karera, Mont Heha, Tambourinaires, Plage de Saga. Voyagez au cœur de l'Afrique.",
+  authors: [{ name: "Bazagod", url: "https://github.com/bazagod" }],
+  creator: "Bazagod",
+  other: {
+    "designer": "Bazagod",
+    "copyright": `© ${new Date().getFullYear()} Bazagod. All rights reserved.`,
+  },
 };
 
 export default function RootLayout({

@@ -82,7 +82,7 @@ export default function Hero() {
         }}
       />
 
-      <div className="absolute inset-0 z-[1] bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
+      <div className="absolute inset-0 z-[1] bg-gradient-to-b from-black/80 via-black/50 to-black/70" />
 
       <div className="relative z-[2] flex flex-col items-center px-6 text-center text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.6)]">
         <p
