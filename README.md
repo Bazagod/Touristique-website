@@ -46,8 +46,8 @@ src/
 
 ```bash
 # Cloner le repo
-git clone https://github.com/bazagod/ikaze-burundi.git
-cd ikaze-burundi
+git clone https://github.com/Bazagod/Touristique-website.git
+cd Touristique-website
 
 # Installer les dépendances
 npm install

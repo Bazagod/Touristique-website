@@ -89,7 +89,7 @@ export default function ContactSection() {
             <p className="mt-3 text-lg font-normal leading-relaxed">
               info@ikaze-burundi.bi
               <br />
-              +257 22 24 00 00
+              +257 00 00 00 00
             </p>
           </div>
         </div>
